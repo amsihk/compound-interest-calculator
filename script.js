@@ -22,5 +22,5 @@ function getValues() {
         totalAmount = totalAmount * ((annualReturn/100) + 1) 
 
     }
-    console.log(totalAmount);
+    console.log(totalAmount); // testing if formula works
 }
