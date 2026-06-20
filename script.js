@@ -5,6 +5,9 @@ const monthlyContribution = document.getElementById('monthly-contribution');
 const estimatedAnnualReturn = document.getElementById('estimated-annual-return');
 const investmentHorizon = document.getElementById('investment-horizon');
 
+const totalInvest = document.getElementById('total-invested')
+const interestEarn = document.getElementById('interest-earned')
+
 let myChart;
 calculateButton.addEventListener('click', getValues)
 
@@ -29,6 +32,13 @@ function getValues() {
         yearlyLabels.push(i)
 
     }
+
+    const totalInvested = depositAmount + (contribution * 12 * time);
+    const interestEarned = totalAmount - totalInvested; 
+
+    totalInvest.textContent = totalInvested.toFixed(2);
+    interestEarn.textContent = interestEarned.toFixed(2);
+
     console.log(totalAmount); // testing if formula works
     console.log(yearlyLabels); // testing if year label works
     console.log(yearlyTotals); // testing if yearly total works
