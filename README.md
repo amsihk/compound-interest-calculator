@@ -16,3 +16,7 @@
 - CSS
 - JavaScript
 - Chart.js
+
+- ## Preview
+
+![Compound Interest Calculator](screenshot.png)
